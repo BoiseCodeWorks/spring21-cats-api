@@ -31,6 +31,7 @@ namespace cats
       services.AddControllers();
 
       // NOTE Register Transient Services
+      // Transient Services are used with Dependency Injection for when a Controller needs a service upon construction
       services.AddTransient<CatsService>();
 
       services.AddSwaggerGen(c =>
