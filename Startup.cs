@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using cats.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -29,9 +30,8 @@ namespace cats
 
       services.AddControllers();
 
-
       // NOTE Register Transient Services
-
+      services.AddTransient<CatsService>();
 
       services.AddSwaggerGen(c =>
       {
